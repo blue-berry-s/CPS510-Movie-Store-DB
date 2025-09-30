@@ -120,12 +120,42 @@ INSERT INTO PROMOTIONTARGETS (
     'Price',
     '4.99'
   );
-  
 
+  -- Pormotion Types based on Year Of Movies
+INSERT INTO PROMOTIONTARGETS (
+    TARGETTYPE, TARGETVALUE
+  ) VALUES (
+    'Year',
+    '1990'
+  );
 
+INSERT INTO PROMOTIONTARGETS (
+    TARGETTYPE, TARGETVALUE
+  ) VALUES (
+    'Year',
+    '2000'
+  );
 
+  INSERT INTO PROMOTIONTARGETS (
+    TARGETTYPE, TARGETVALUE
+  ) VALUES (
+    'Year',
+    '2010'
+  );
 
+  INSERT INTO PROMOTIONTARGETS (
+    TARGETTYPE, TARGETVALUE
+  ) VALUES (
+    'Year',
+    '2020'
+  );
 
+  INSERT INTO PROMOTIONTARGETS (
+    TARGETTYPE, TARGETVALUE
+  ) VALUES (
+    'Year',
+    '2025'
+  );
 
-
+  COMMIT;
 

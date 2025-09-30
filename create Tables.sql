@@ -105,12 +105,33 @@ ALTER TABLE StorePromotions ADD (
 );
 
 ALTER TABLE StorePromotions ADD (
-    targetID    NUMBER NOT NULL REFERENCES StorePromotions(promotionID)
+    targetID    NUMBER NOT NULL REFERENCES PromotionTargets(targetID)
 );
 
 --option description to the storePromotion (Eg: Christmas Sale) - or could be used as description text on app
 ALTER TABLE StorePromotions ADD (
     description VARCHAR2(255)
 );
+
+CREATE OR REPLACE TRIGGER trg_update_order_amount
+AFTER INSERT OR UPDATE OR DELETE ON OrderDetails
+FOR EACH ROW
+DECLARE
+  v_total NUMBER(8,2);
+BEGIN
+  -- Recalculate total amount for the affected order
+  SELECT SUM(m.price * od.quantity)
+  INTO v_total
+  FROM OrderDetails od
+  JOIN Movie m ON od.movieID = m.movieID
+  WHERE od.orderID = :NEW.orderID;
+
+  -- Update the Orders table
+  UPDATE Orders
+  SET amount = NVL(v_total, 0)
+  WHERE orderID = :NEW.orderID;
+END;
+/
+
 
 
