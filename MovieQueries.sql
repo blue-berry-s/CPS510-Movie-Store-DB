@@ -1,6 +1,7 @@
-SELECT title
-FROM Movie 
-WHERE price >= 5.99;
+SELECT Title, Price
+FROM Movie
+WHERE ORDER BY PRICE 
 
 
+  
 SELECT *
