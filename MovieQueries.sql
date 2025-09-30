@@ -1,3 +1,6 @@
-SELECT *
+SELECT title
 FROM Movie 
-WHERE 
+WHERE price >= 5.99;
+
+
+SELECT *
