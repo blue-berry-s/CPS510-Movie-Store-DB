@@ -1,8 +1,8 @@
-Drop TABLE Account;
-
 Drop TABLE ADMIN;
 
-Drop TABLE Customer;
+DROP TABLE Customer CASCADE CONSTRAINTS;
+
+DROP TABLE Account CASCADE CONSTRAINTS;
 
 Drop TABLE CustomerDeals;
 
