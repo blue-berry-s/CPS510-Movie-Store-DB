@@ -10,7 +10,7 @@ BEGIN
       AND a.lastName  = 'Stewart';
 
     INSERT INTO Orders (customerID, amount, orderDate)
-    VALUES (v_custID, 150.00, TO_DATE('2025-09-30', 'YYYY-MM-DD'));
+    VALUES (v_custID, 20.00, TO_DATE('2025-09-30', 'YYYY-MM-DD'));
 
     COMMIT;
 END;
@@ -28,7 +28,7 @@ BEGIN
       AND a.lastName  = 'Gomez';
 
     INSERT INTO Orders (customerID, amount, orderDate)
-    VALUES (v_custID, 89.99, TO_DATE('2025-09-28', 'YYYY-MM-DD'));
+    VALUES (v_custID, 12.99, TO_DATE('2025-09-28', 'YYYY-MM-DD'));
 
     COMMIT;
 END;
@@ -46,7 +46,7 @@ BEGIN
       AND a.lastName  = 'Nelson';
 
     INSERT INTO Orders (customerID, amount, orderDate)
-    VALUES (v_custID, 120.50, TO_DATE('2025-09-25', 'YYYY-MM-DD'));
+    VALUES (v_custID, 28.50, TO_DATE('2025-09-25', 'YYYY-MM-DD'));
 
     COMMIT;
 END;
@@ -64,7 +64,7 @@ BEGIN
       AND a.lastName  = 'Howard';
 
     INSERT INTO Orders (customerID, amount, orderDate)
-    VALUES (v_custID, 200.00, TO_DATE('2025-09-22', 'YYYY-MM-DD'));
+    VALUES (v_custID, 23.40, TO_DATE('2025-09-22', 'YYYY-MM-DD'));
 
     COMMIT;
 END;
@@ -82,7 +82,7 @@ BEGIN
       AND a.lastName  = 'Harrison';
 
     INSERT INTO Orders (customerID, amount, orderDate)
-    VALUES (v_custID, 59.75, TO_DATE('2025-09-20', 'YYYY-MM-DD'));
+    VALUES (v_custID, 18.75, TO_DATE('2025-09-20', 'YYYY-MM-DD'));
 
     COMMIT;
 END;
@@ -99,7 +99,7 @@ BEGIN
       AND a.lastName  = 'Bennett';
 
     INSERT INTO Orders (customerID, amount, orderDate)
-    VALUES (v_custID, 175.25, TO_DATE('2025-09-18', 'YYYY-MM-DD'));
+    VALUES (v_custID, 20.25, TO_DATE('2025-09-18', 'YYYY-MM-DD'));
 
     COMMIT;
 END;
