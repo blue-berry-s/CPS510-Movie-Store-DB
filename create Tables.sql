@@ -115,21 +115,24 @@ ALTER TABLE StorePromotions ADD (
 
 CREATE OR REPLACE TRIGGER trg_update_order_amount
 AFTER INSERT OR UPDATE OR DELETE ON OrderDetails
-FOR EACH ROW
 DECLARE
+  v_orderID Orders.orderID%TYPE;
   v_total NUMBER(8,2);
 BEGIN
-  -- Recalculate total amount for the affected order
-  SELECT SUM(m.price * od.quantity)
-  INTO v_total
-  FROM OrderDetails od
-  JOIN Movie m ON od.movieID = m.movieID
-  WHERE od.orderID = :NEW.orderID;
+  -- Loop through affected orders
+  FOR r IN (
+    SELECT DISTINCT orderID FROM OrderDetails
+  ) LOOP
+    SELECT SUM(m.price * od.quantity)
+    INTO v_total
+    FROM OrderDetails od
+    JOIN Movie m ON od.movieID = m.movieID
+    WHERE od.orderID = r.orderID;
 
-  -- Update the Orders table
-  UPDATE Orders
-  SET amount = NVL(v_total, 0)
-  WHERE orderID = :NEW.orderID;
+    UPDATE Orders
+    SET amount = NVL(v_total, 0)
+    WHERE orderID = r.orderID;
+  END LOOP;
 END;
 /
 
