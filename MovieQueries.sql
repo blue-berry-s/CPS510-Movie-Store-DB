@@ -1,6 +1,6 @@
 SELECT Title, Price
 FROM Movie
-WHERE ORDER BY PRICE 
+ORDER BY PRICE 
 
 
   
