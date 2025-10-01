@@ -1,7 +1,4 @@
 SELECT Title, Price
 FROM Movie
-ORDER BY PRICE 
+ORDER BY Price ASC;
 
-
-  
-SELECT *
