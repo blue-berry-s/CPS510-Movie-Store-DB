@@ -16,4 +16,9 @@ Drop TABLE Orders;
 
 Drop TABLE Review;
 
-Drop TABLE StorePromotions;
+Drop TABLE PROMOTIONTARGETS CASCADE CONSTRAINTS;
+
+Drop TABLE StorePromotions CASCADE CONSTRAINTS;
+
+COMMIT;
+

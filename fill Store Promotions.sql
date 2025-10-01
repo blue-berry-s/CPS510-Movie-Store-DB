@@ -12,7 +12,7 @@ BEGIN
     STARTDATE, ENDDATE, POINTSINCREASE, salePercentage, PROMOTIONTYPE, TARGETID, DESCRIPTION
   ) VALUES (
     TO_DATE('2025-10-25', 'YYYY-MM-DD'),
-    TO_DATE('2025-10-31', 'YYYY-MM-DD'),
+    TO_DATE('2025-11-01', 'YYYY-MM-DD'),
     0,
     50,
     'Discount',
@@ -26,7 +26,7 @@ END;
 
 -- Valentine's Sale - Customers get 25% off all movies with the romance genre
 DECLARE
-  v_targetIVD PROMOTIONTARGETS.TARGETID%TYPE;
+  v_targetID PROMOTIONTARGETS.TARGETID%TYPE;
 BEGIN
     SELECT TARGETID
         INTO v_targetID
@@ -38,7 +38,7 @@ BEGIN
     STARTDATE, ENDDATE, POINTSINCREASE, salePercentage, PROMOTIONTYPE, TARGETID, DESCRIPTION
   ) VALUES (
     TO_DATE('2026-02-11', 'YYYY-MM-DD'),
-    TO_DATE('2026-02-14', 'YYYY-MM-DD'),
+    TO_DATE('2026-02-15', 'YYYY-MM-DD'),
     0,
     15,
     'Discount',
@@ -53,7 +53,7 @@ END;
 
 -- New Years Points Promotion - Customers get additional 25 points on all movies produced in 2025
 DECLARE
-  v_targetIVD PROMOTIONTARGETS.TARGETID%TYPE;
+  v_targetID PROMOTIONTARGETS.TARGETID%TYPE;
 BEGIN
     SELECT TARGETID
         INTO v_targetID
@@ -64,8 +64,8 @@ BEGIN
   INSERT INTO STOREPROMOTIONS (
     STARTDATE, ENDDATE, POINTSINCREASE, salePercentage, PROMOTIONTYPE, TARGETID, DESCRIPTION
   ) VALUES (
-    TO_DATE('2026-02-11', 'YYYY-MM-DD'),
-    TO_DATE('2026-02-14', 'YYYY-MM-DD'),
+    TO_DATE('2025-12-30', 'YYYY-MM-DD'),
+    TO_DATE('2026-01-02', 'YYYY-MM-DD'),
     25,
     0,
     'Points',
@@ -79,7 +79,7 @@ END;
 
 -- Christopher Nolan Birthday Points Promotion - Customers get 70 additional points from movies directed by Christopher Nolan
 DECLARE
-  v_targetIVD PROMOTIONTARGETS.TARGETID%TYPE;
+  v_targetID PROMOTIONTARGETS.TARGETID%TYPE;
 BEGIN
     SELECT TARGETID
         INTO v_targetID
@@ -91,7 +91,7 @@ BEGIN
     STARTDATE, ENDDATE, POINTSINCREASE, salePercentage, PROMOTIONTYPE, TARGETID, DESCRIPTION
   ) VALUES (
     TO_DATE('2026-07-30', 'YYYY-MM-DD'),
-    TO_DATE('2026-07-30', 'YYYY-MM-DD'),
+    TO_DATE('2026-07-31', 'YYYY-MM-DD'),
     70,
     0,
     'Points',
@@ -105,7 +105,7 @@ END;
 
 -- Flash Sale 25% off all movies
 DECLARE
-  v_targetIVD PROMOTIONTARGETS.TARGETID%TYPE;
+   v_targetID PROMOTIONTARGETS.TARGETID%TYPE;
 BEGIN
     SELECT TARGETID
         INTO v_targetID
@@ -120,7 +120,7 @@ BEGIN
     TO_DATE('2026-03-15', 'YYYY-MM-DD'),
     0,
     25,
-    'sale',
+    'Discount',
     v_targetID,
     'Flash sale: 25% off all movies'
   );
