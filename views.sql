@@ -31,3 +31,17 @@ FETCH FIRST 5 ROWS ONLY;
 
 DROP VIEW Tanya_order_history;
 DROP VIEW Top_Rated_Movies;
+
+
+-- View that displays the number of orders in the last 5 days.
+CREATE VIEW Recent_Orders AS
+SELECT 
+    ORDERID,
+    CUSTOMERID,
+    ORDERDATE,
+    AMOUNT
+FROM ORDERS
+WHERE ORDERDATE >= SYSDATE - 5
+ORDER BY ORDERDATE DESC;
+
+SELECT * FROM Recent_Orders;
