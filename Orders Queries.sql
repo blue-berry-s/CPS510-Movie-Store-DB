@@ -6,17 +6,20 @@ GROUP BY TO_CHAR(ORDERDATE, 'YYYY');
 
 -- Get the average revenue based on movie genres in descending order
 SELECT m.genre AS Genre, ROUND(AVG(o.AMOUNT),2) AS Revenue 
-FROM ORDERS o, MOVIE m, ORDERDETAILS d
-WHERE o.ORDERID = d.ORDERID
-AND d.MOVIEID = m.MOVIEID
+FROM  ORDERDETAILS d
+    INNER JOIN ORDERS o ON o.ORDERID = d.ORDERID
+    INNER JOIN MOVIE m ON m.MOVIEID = d.MOVIEID
 GROUP BY m.genre
 ORDER BY AVG(o.AMOUNT) DESC;
 
 -- Sort Customers Based on the Total of Number of Items Bought
-SELECT acc.firstName as Customer, SUM(d.quantity) as items_bought
-FROM ORDERS o, Movie m, ORDERDETAILS d, CUSTOMER cust, ACCOUNT acc
-WHERE o.ORDERID = d.ORDERID
-AND d.MOVIEID = m.MOVIEID
-AND o.CUSTOMERID = cust.CUSTOMERID
-AND cust.AccountID = acc.ACCOUNTID
-GROUP BY acc.firstName;
+SELECT 
+    acc.firstName AS Customer, 
+    SUM(od.quantity) AS items_bought
+FROM 
+    ORDERDETAILS od
+    JOIN ORDERS o ON o.ORDERID = od.ORDERID
+    JOIN CUSTOMER cust ON cust.CUSTOMERID = o.CUSTOMERID
+    JOIN ACCOUNT acc ON acc.ACCOUNTID = cust.ACCOUNTID
+GROUP BY 
+    acc.firstName;
