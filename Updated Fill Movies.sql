@@ -18,6 +18,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Aaron Eckhart');
   INSERT INTO MovieCast VALUES (mid, 'Michael Caine');
   INSERT INTO MovieCast VALUES (mid, 'Maggie Gyllenhaal');
+  COMMIT;
 END;
 /
 
@@ -38,6 +39,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Jessica Chastain');
   INSERT INTO MovieCast VALUES (mid, 'Michael Caine');
   INSERT INTO MovieCast VALUES (mid, 'Bill Irwin');
+  COMMIT;
 END;
 /
 
@@ -56,6 +58,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Robert Hays');
   INSERT INTO MovieCast VALUES (mid, 'Julie Hagerty');
   INSERT INTO MovieCast VALUES (mid, 'Peter Graves');
+  COMMIT;
 END;
 /
 
@@ -77,6 +80,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Stephanie Hsu');
   INSERT INTO MovieCast VALUES (mid, 'Ke Huy Quan');
   INSERT INTO MovieCast VALUES (mid, 'James Hong');
+  COMMIT;
 END;
 /
 
@@ -96,6 +100,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Per Ragnar');
   INSERT INTO MovieCast VALUES (mid, 'Henrik Dahl');
   INSERT INTO MovieCast VALUES (mid, 'Karin Berquist');
+  COMMIT;
 END;
 /
 
@@ -116,6 +121,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Catherine Keener');
   INSERT INTO MovieCast VALUES (mid, 'Bradley Whitford');
   INSERT INTO MovieCast VALUES (mid, 'Caleb Landry Jones');
+  COMMIT;
 END;
 /
 
@@ -136,6 +142,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Ian McKellen');
   INSERT INTO MovieCast VALUES (mid, 'Orlando Bloom');
   INSERT INTO MovieCast VALUES (mid, 'Sean Bean');
+  COMMIT;
 END;
 /
 
@@ -156,6 +163,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Mandy Patinkin');
   INSERT INTO MovieCast VALUES (mid, 'Chris Sarandon');
   INSERT INTO MovieCast VALUES (mid, 'Christopher Guest');
+  COMMIT;
 END;
 /
 
@@ -176,6 +184,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'John Legend');
   INSERT INTO MovieCast VALUES (mid, 'Rosemarie DeWitt');
   INSERT INTO MovieCast VALUES (mid, 'J.K. Simmons');
+  COMMIT;
 END;
 /
 
@@ -196,6 +205,7 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Chris Cooper');
   INSERT INTO MovieCast VALUES (mid, 'Rashida Jones');
   INSERT INTO MovieCast VALUES (mid, 'Alan Arkin');
+  COMMIT;
 END;
 /
 
@@ -215,5 +225,6 @@ BEGIN
   INSERT INTO MovieCast VALUES (mid, 'Danny Elfman');
   INSERT INTO MovieCast VALUES (mid, 'Chris Sarandon');
   INSERT INTO MovieCast VALUES (mid, 'William Hickey');
+  COMMIT;
 END;
 /
